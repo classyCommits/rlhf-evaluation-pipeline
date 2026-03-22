@@ -19,11 +19,10 @@ The project demonstrates end-to-end competence across the full annotation lifecy
 ├── app.py                   # Streamlit annotation UI
 ├── evaluator.py             # Backend: data loading, saving, export logic
 ├── data_quality_check.py    # Automated dataset auditor (schema + quality checks)
-├── iaa_annotations.json    # Two-annotator IAA data (κ=0.737, simulated)
+├── iaa_annotations.json     # Two-annotator IAA data (κ=0.737, simulated)
 ├── data/
 │   └── data.json            # Input prompt-response pairs for annotation
-├── results/
-│   └── results.csv          # Evaluation outputs (appended on each submission)
+├── results/                 # Auto-created on first submission (gitignored)             
 ├── exports/
 │   └── rlhf_dataset.json    # Final training-ready export (flagged rows excluded)
 └── docs/
