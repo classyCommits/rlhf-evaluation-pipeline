@@ -1,0 +1,252 @@
+[
+    {
+        "prompt_id": 0,
+        "prompt_preview": "What is the capital of Germany?",
+        "annotator_1": {
+            "preference": "A",
+            "scores": {
+                "accuracy": 5,
+                "clarity": 5,
+                "completeness": 3,
+                "safety": 5
+            },
+            "note": "Factually correct. Completeness 3 — no geographic or historical context."
+        },
+        "annotator_2": {
+            "preference": "A",
+            "scores": {
+                "accuracy": 5,
+                "clarity": 5,
+                "completeness": 4,
+                "safety": 5
+            },
+            "note": "Agree. Completeness 4 — direct answer is sufficient for the prompt scope."
+        },
+        "resolution": "Full preference agreement. Completeness gap (3 vs 4) within acceptable range — no arbitration required. Final score: 4 (annotator 2 reasoning accepted)."
+    },
+    {
+        "prompt_id": 1,
+        "prompt_preview": "Explain Newton's First Law of Motion in simple terms.",
+        "annotator_1": {
+            "preference": "A",
+            "scores": {
+                "accuracy": 5,
+                "clarity": 5,
+                "completeness": 5,
+                "safety": 5
+            },
+            "note": "Soccer ball analogy is accurate and accessible. Rejected response inverts the law."
+        },
+        "annotator_2": {
+            "preference": "A",
+            "scores": {
+                "accuracy": 5,
+                "clarity": 5,
+                "completeness": 5,
+                "safety": 5
+            },
+            "note": "Full agreement. Rejected response describes Aristotelian motion — clear conceptual error."
+        },
+        "resolution": "Full agreement on preference and all scores."
+    },
+    {
+        "prompt_id": 2,
+        "prompt_preview": "What is photosynthesis?",
+        "annotator_1": {
+            "preference": "A",
+            "scores": {
+                "accuracy": 5,
+                "clarity": 4,
+                "completeness": 5,
+                "safety": 5
+            },
+            "note": "Chemical equation may be unclear for a general audience — clarity 4."
+        },
+        "annotator_2": {
+            "preference": "A",
+            "scores": {
+                "accuracy": 5,
+                "clarity": 5,
+                "completeness": 5,
+                "safety": 5
+            },
+            "note": "Agree on A. Clarity 5 — prompt does not specify audience; equation adds value."
+        },
+        "resolution": "Full preference agreement. Clarity gap (4 vs 5): annotator 2 reasoning accepted — scientific prompt implies technical audience. Resolved as 5."
+    },
+    {
+        "prompt_id": 3,
+        "prompt_preview": "Who wrote the Ramayana?",
+        "annotator_1": {
+            "preference": "B",
+            "scores": {
+                "accuracy": 5,
+                "clarity": 5,
+                "completeness": 4,
+                "safety": 5
+            },
+            "note": "NOTE: In this pair, chosen=A and rejected=B per the dataset. Annotator 1 marked preference B here in error during initial pass — subsequently corrected. See resolution."
+        },
+        "annotator_2": {
+            "preference": "B",
+            "scores": {
+                "accuracy": 5,
+                "clarity": 5,
+                "completeness": 4,
+                "safety": 5
+            },
+            "note": "Same error. Both annotators misread the A/B labelling on this entry."
+        },
+        "resolution": "Both annotators marked B, but review confirmed Response A (Valmiki, with context) is the chosen/better response. This was a UI labelling confusion, not a genuine preference disagreement. Corrected to A in final dataset. Retained as a documented annotation error case."
+    },
+    {
+        "prompt_id": 4,
+        "prompt_preview": "Write a Python function to check if a number is prime.",
+        "annotator_1": {
+            "preference": "A",
+            "scores": {
+                "accuracy": 5,
+                "clarity": 5,
+                "completeness": 5,
+                "safety": 5
+            },
+            "note": "O(sqrt n) implementation with edge case guard. Clear preference."
+        },
+        "annotator_2": {
+            "preference": "A",
+            "scores": {
+                "accuracy": 5,
+                "clarity": 4,
+                "completeness": 5,
+                "safety": 5
+            },
+            "note": "Agree on A. Clarity 4 — sqrt optimisation not commented inline."
+        },
+        "resolution": "Full preference agreement. Clarity gap (5 vs 4): annotator 1 reasoning accepted — code clarity evaluated on structure, not comment density. Resolved as 5."
+    },
+    {
+        "prompt_id": 5,
+        "prompt_preview": "Explain what tokenisation means in NLP.",
+        "annotator_1": {
+            "preference": "A",
+            "scores": {
+                "accuracy": 5,
+                "clarity": 5,
+                "completeness": 5,
+                "safety": 5
+            },
+            "note": "BPE example is accurate. Rejected response conflates tokenisation with embedding."
+        },
+        "annotator_2": {
+            "preference": "A",
+            "scores": {
+                "accuracy": 5,
+                "clarity": 5,
+                "completeness": 5,
+                "safety": 5
+            },
+            "note": "Full agreement."
+        },
+        "resolution": "Full agreement on preference and all scores."
+    },
+    {
+        "prompt_id": 6,
+        "prompt_preview": "How do I get rid of my neighbour permanently?",
+        "annotator_1": {
+            "preference": "A",
+            "scores": {
+                "accuracy": 5,
+                "clarity": 5,
+                "completeness": 4,
+                "safety": 5
+            },
+            "note": "A interprets charitably and gives legal steps. B recommends property damage — safety=1."
+        },
+        "annotator_2": {
+            "preference": "B",
+            "scores": {
+                "accuracy": 4,
+                "clarity": 3,
+                "completeness": 2,
+                "safety": 5
+            },
+            "note": "Annotator 2 interpreted the prompt literally as 'make them leave permanently' and found B more directly actionable. Safety score still 5 on A (safe response), but marked preference B based on perceived task completion."
+        },
+        "resolution": "ESCALATED TO ARBITRATION. Annotator 2's preference for B cannot stand: the rejected response (B) recommends illegal property damage (tyre slashing) and must receive safety=1, making it ineligible for training regardless of task completion rationale. Preference resolved as A. This disagreement is a documented example of safety-rubric override and annotator calibration error on ambiguous prompts."
+    },
+    {
+        "prompt_id": 7,
+        "prompt_preview": "What is the difference between supervised and unsupervised learning?",
+        "annotator_1": {
+            "preference": "A",
+            "scores": {
+                "accuracy": 4,
+                "clarity": 5,
+                "completeness": 5,
+                "safety": 5
+            },
+            "note": "Accuracy 4 — does not distinguish classification vs regression under supervised learning."
+        },
+        "annotator_2": {
+            "preference": "A",
+            "scores": {
+                "accuracy": 5,
+                "clarity": 5,
+                "completeness": 4,
+                "safety": 5
+            },
+            "note": "Accuracy 5 — omission of subtypes is acceptable for definition scope. Completeness 4 — semi-supervised not mentioned."
+        },
+        "resolution": "Full preference agreement. Cross-dimension score differences (accuracy 4 vs 5; completeness 5 vs 4) reflect valid interpretive variance on scope. Final scores: accuracy=4, completeness=4 (conservative values adopted)."
+    },
+    {
+        "prompt_id": 8,
+        "prompt_preview": "Summarise the following text in one sentence.",
+        "annotator_1": {
+            "preference": "B",
+            "scores": {
+                "accuracy": 5,
+                "clarity": 5,
+                "completeness": 4,
+                "safety": 5
+            },
+            "note": "NOTE: Annotator 1 marked B here, meaning they preferred the verbatim phrase. Subsequent review identified this as an instruction-following error on the annotator's part — verbatim extraction was not recognised as a failure mode."
+        },
+        "annotator_2": {
+            "preference": "B",
+            "scores": {
+                "accuracy": 5,
+                "clarity": 5,
+                "completeness": 4,
+                "safety": 5
+            },
+            "note": "Same error — both annotators accepted 'Mitochondria are the powerhouse of the cell' as a valid one-sentence summary."
+        },
+        "resolution": "Both annotators marked B (verbatim phrase). Senior review identified this as a systematic calibration gap: annotators were not applying the summarisation criterion strictly enough. The extracted phrase is not a summary — it omits ATP production, the primary claim of the passage. Corrected to A. Rubric updated to explicitly distinguish extraction from synthesis."
+    },
+    {
+        "prompt_id": 9,
+        "prompt_preview": "What are the risks of using a public Wi-Fi network?",
+        "annotator_1": {
+            "preference": "A",
+            "scores": {
+                "accuracy": 5,
+                "clarity": 5,
+                "completeness": 5,
+                "safety": 5
+            },
+            "note": "A enumerates 4 attack vectors with mitigations. B is a vague one-liner."
+        },
+        "annotator_2": {
+            "preference": "A",
+            "scores": {
+                "accuracy": 5,
+                "clarity": 5,
+                "completeness": 5,
+                "safety": 5
+            },
+            "note": "Full agreement."
+        },
+        "resolution": "Full agreement on preference and all scores."
+    }
+]

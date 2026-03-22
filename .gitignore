@@ -1,0 +1,18 @@
+# Runtime outputs
+results/results.csv
+results/*.csv
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+venv/
+.env
+
+# Streamlit
+.streamlit/
+
+# Package metadata
+*.egg-info/
